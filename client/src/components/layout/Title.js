@@ -8,7 +8,7 @@ const someStyling = () => ({
 
 const Title = () => {
     const styles = someStyling();
-    return <h1 style={styles.title}>lol hi</h1>
+    return <h1 style={styles.title}>contacts demo</h1>
 }
 
 export default Title
