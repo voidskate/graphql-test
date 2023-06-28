@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { EDIT_CONTACT } from '../../queries'
 
 const EditContact = props => {
-	const { firstName, lastName } = props;
+	const { id, firstName, lastName } = props;
 	const [form] = Form.useForm();
 	const [, forceUpdate] = useState();
 	const [edit_contact] = useMutation(EDIT_CONTACT);
@@ -14,7 +14,7 @@ const EditContact = props => {
 	}, [])
 
 	const onFinish = (values) => {
-		const { id, firstName, lastName } = values;
+		const { firstName, lastName } = values;
 
 		edit_contact({
 			variables: {
